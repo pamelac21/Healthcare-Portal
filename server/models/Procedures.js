@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
 
-const ProceduresSchema = new mongoose.Schema({
+const { Schema } = mongoose;
+
+const proceduresSchema = new Schema({
     name:{
         type: String,
         required: true,
@@ -20,4 +22,6 @@ const ProceduresSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model("Facilities", FacilitiesSchema)
+const Procedures = mongoose.model("Procedures", proceduresSchema)
+
+module.exports = Procedures;
