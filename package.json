@@ -1,0 +1,23 @@
+{
+  "name": "Healthcare-Project-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crhodes111/Healthcare-Project-3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crhodes111/Healthcare-Project-3/issues"
+  },
+  "homepage": "https://github.com/crhodes111/Healthcare-Project-3#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
