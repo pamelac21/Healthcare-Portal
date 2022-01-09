@@ -15,6 +15,21 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in");
     },
+    providers: async (parent, args, context) => {
+      const providerData = await Providers.find()
+
+      return providerData
+    },
+    facilities: async (parent, args, context) => {
+      const facilityData = await Facilities.find()
+
+      return facilityData
+    },
+    procedures: async (parent, args, context) => {
+      const procedureData = await Procedures.find()
+
+      return procedureData
+    }
   },
 
   Mutation: {

@@ -3,6 +3,10 @@ const mongoose = require("mongoose")
 const { Schema } = mongoose;
 
 const proceduresSchema = new Schema({
+    id:{
+        type: Number,
+        required: true,
+    },
     name:{
         type: String,
         required: true,
@@ -14,7 +18,7 @@ const proceduresSchema = new Schema({
         type: Number,
 
     },
-    specialtyId:{
+    facilityId:{
         type: Number,
     }
 
@@ -22,4 +26,6 @@ const proceduresSchema = new Schema({
 
 })
 
-module.exports = mongoose.model("Procedures", proceduresSchema)
+const Procedures = mongoose.model("Procedures", proceduresSchema)
+
+module.exports = Procedures;

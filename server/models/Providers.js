@@ -3,14 +3,15 @@ const mongoose = require("mongoose")
 const { Schema } = mongoose;
 
 const ProvidersSchema = new Schema({
+    id:{
+        type: Number,
+        required: true,
+    },
     name:{
         type: String,
         required: true,
     },
-    title:{
-        type: String,
 
-    },
     facilityId:{
         type: Number,
     }

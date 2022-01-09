@@ -1,18 +1,25 @@
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
-const dotenv = require("dotenv");//
-//const mongoose = require("mongoose");//
-
+require("dotenv").config
+const app = express();
+const mongoose = require("mongoose")
 
 const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
-const db = require("./config/connection")
+
 
 
 const PORT = process.env.PORT || 3001;
-dotenv.config();//
-const app = express();
+const uri = process.env.MONGO_URI
+
+
+mongoose.connect("mongodb+srv://connerrhodes25:bubs@cluster0.e0fmd.mongodb.net/Project3?retryWrites=true&w=majority") 
+.then(() => console.log("DB connected!"));
+
+    mongoose.connection.on('error',function(err){   
+console.log("The error is: ");
+});
 
 const startServer = async () => {
   const server =  new ApolloServer({
@@ -21,10 +28,10 @@ const startServer = async () => {
     context: authMiddleware,
   });
   await server.start()
-
-server.applyMiddleware({ app });
-}
-startServer();
+  server.applyMiddleware({ app });
+  }
+  startServer();
+  
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -37,9 +44,8 @@ app.use(express.json());
 //   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 // });
 
-db.once("open", () => {
+
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
-    //console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
-});
+
