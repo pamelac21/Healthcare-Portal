@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
 
-const ProvidersSchema = new mongoose.Schema({
+const { Schema } = mongoose;
+
+const ProvidersSchema = new Schema({
     name:{
         type: String,
         required: true,
@@ -16,4 +18,6 @@ const ProvidersSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model("Providers", ProvidersSchema)
+const Providers = mongoose.model("Providers", ProvidersSchema)
+
+module.exports = Providers;
