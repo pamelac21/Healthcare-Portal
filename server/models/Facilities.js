@@ -14,5 +14,5 @@ const facilitiesSchema = new Schema({
 
 })
 
-module.exports = mongoose.model("Facilities", FacilitiesSchema)
+module.exports = mongoose.model("Facilities", facilitiesSchema)
 
