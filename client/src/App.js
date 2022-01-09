@@ -1,8 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client'
 import Home from './pages/Home';
+import Providers from './pages/Providers';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Facilities from './pages/Facilities';
+import Procedures from './pages/Procedures';
+import Login from './pages/Login';
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -15,11 +19,15 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+      <Header/>
         <div className="flex-column justify-flex-start min-100-vh">
           <div className="container">
             <Routes>
-            <Route exact path="/" element={<Home/>}>
-              </Route>
+            <Route exact path="/" element={<Home/>}></Route>
+            <Route exact path="/Facilities" element={<Facilities/>}></Route>
+            <Route exact path="/Procedures" element={<Procedures/>}></Route>
+            <Route exact path="/Providers" element={<Providers/>}></Route>
+            <Route exact path="/Login" element={<Login/>}></Route>
 
             </Routes>
           </div>

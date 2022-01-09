@@ -1,0 +1,43 @@
+.action-button {
+	font: inherit;
+	font-size: 1.25rem;
+	padding: 1em;
+	width: 100%;
+	font-weight: 500;
+	background-color: navy;
+	border-radius: 6px;
+	color: #FFF;
+	margin-bottom: 10px;
+}
+.card-searchform {
+	margin-left: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	max-width: 700px;
+	background-color: rgb(214, 183, 9);
+	border-radius: 10px;
+	padding: .75rem;
+	margin-top: 20px;
+}
+.form-input-searchform {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.2rem 0;
+    font-size: 1.2rem;
+    border: 2px solid var(--dark);
+    border-radius: var(--border-radius);
+  }
+  .action-button-search {
+	font: inherit;
+	font-size: 1.25rem;
+	margin: auto;
+	float: right;
+	width: 50%;
+	font-weight: 500;
+	background-color: navy;
+	border-radius: 6px;
+	color: #FFF;
+	margin-bottom: 10px;
+}
