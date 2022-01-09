@@ -20,4 +20,4 @@ const ProceduresSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model("Facilities", FacilitiesSchema)
+module.exports = mongoose.model("Procedures", ProceduresSchema)
