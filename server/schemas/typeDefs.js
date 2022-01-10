@@ -10,23 +10,27 @@ type User {
   }
 
 type Facility {
-    id : Int
+    Id : Int
     name: String
     address: String
+    
+
 }
 
 type Procedure {
-    id: Int
-    name: String
-    cpt: String
-    price: Int
-    facilityId: Int
+    Id: Int
+    Procedure: String
+    CPTCode: String
+    Price: Int
+    FacilityId: Int
+    facility: [Facility]
 }
 
 type Provider {
-    id: Int
+    Id: Int
     name: String
-    facilityId: Int
+    FacilityId: Int
+    facility: [Facility]
 }
 
   type Auth {
@@ -36,6 +40,7 @@ type Provider {
 
   type Query {
     me: User
+    users: [User]
     providers: [Provider]
     facilities: [Facility]
     procedures: [Procedure]
