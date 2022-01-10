@@ -1,9 +1,9 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_PROVIDERS = gql`
-  query providers {
+  {
     providers {
-        id
+        Id
         name
         FacilityId
       }

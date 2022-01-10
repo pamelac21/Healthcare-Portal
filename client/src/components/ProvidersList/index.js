@@ -7,19 +7,19 @@ const ProvidersList = ({ providers }) => {
 
   return (
     <div>
-      {/* {providers &&
+      {providers &&
         providers.map(provider => (
-          <div key={provider._id} className="card mb-3">
+          <div key={provider.Id} className="card mb-3">
             <h2 className="card-header">
               {provider.name}
             </h2>
             <div className="card-body">
-              <p>{provider.title}
-              {provider.facilityId}
+              <p>
+              {provider.FacilityId}
             </p>
             </div>
           </div>
-        ))} */}
+        ))}
     </div>
   );
 };

@@ -5,9 +5,13 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PROVIDERS } from '../utils/queries';
 
 function Providers() {
+    const { loading, data } = useQuery(QUERY_PROVIDERS);
+    const providers = data?.providers || [];
+    console.log(providers);
     return (
         <div>
-            <ProvidersList/>
+            <ProvidersList
+            providers={providers}/>
         </div>
     )
 }
