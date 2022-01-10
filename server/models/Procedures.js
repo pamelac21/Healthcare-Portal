@@ -3,22 +3,22 @@ const mongoose = require("mongoose")
 const { Schema } = mongoose;
 
 const proceduresSchema = new Schema({
-    id:{
+    Id:{
         type: Number,
         required: true,
     },
-    name:{
+    Procedure:{
         type: String,
         required: true,
     },
-    cpt:{
+    CPTCode:{
         type: String,
     },
-    price:{
+    Price:{
         type: Number,
 
     },
-    facilityId:{
+    FacilityId:{
         type: Number,
     }
 

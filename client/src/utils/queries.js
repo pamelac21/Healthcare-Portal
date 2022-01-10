@@ -1,18 +1,27 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_THOUGHTS = gql`
+export const QUERY_PROVIDERS = gql`
   query providers {
     providers {
-      _id
-      thoughtText
-      createdAt
-      username
-      reactionCount
-      reactions {
-        _id
-        createdAt
-        username
-        reactionBody
+        id
+        name
+        FacilityId
+      }
+    }
+`;
+
+export const QUERY_SEARCH = gql`
+  query Search($FacilityId: Int) {
+    procedures(FacilityId: $FacilityId) {
+      Id
+      Procedure
+      CPTCode
+      Price
+      FacilityId
+      facilities{ 
+        Id
+        name
+        address
       }
     }
   }

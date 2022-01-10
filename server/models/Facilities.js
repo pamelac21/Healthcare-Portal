@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const facilitiesSchema = new Schema({
-    id:{
+    Id:{
         type: Number,
         required: true,
     },

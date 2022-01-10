@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const { Schema } = mongoose;
 
 const ProvidersSchema = new Schema({
-    id:{
+    Id:{
         type: Number,
         required: true,
     },
@@ -12,7 +12,7 @@ const ProvidersSchema = new Schema({
         required: true,
     },
 
-    facilityId:{
+    FacilityId:{
         type: Number,
     }
 
