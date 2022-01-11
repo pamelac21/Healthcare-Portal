@@ -1,26 +1,25 @@
 import React from 'react';
 
-const ProceduresList = () => {
-  // if (!procedures.length) {
-  //   return <h3>No procedures found</h3>;
-  // }
+const ProceduresList = ({procedures}) => {
+  if (!procedures.length) {
+    return <h3>No procedures found</h3>;
+  }
 
   return (
     <div>
-      <button>testing</button>
-      {/* {procedures &&
+      {procedures &&
         procedures.map(procedure => (
-          <div key={procedure._id} className="card mb-3">
+          <div key={procedure.Id} className="card mb-3">
             <h2 className="card-header">
-              {procedure.name}
+              {procedure.Procedure}
             </h2>
             <div className="card-body">
-              <p>{procedure.cpt}
-                {procedure.price}
-                {procedure.specialtyId}</p>
+              <p>{procedure.CPTCode}</p>
+                <p>{procedure.Price}</p>
+                <p>{procedure.FacilityId}</p>
             </div>
           </div>
-        ))} */}
+        ))}
     </div>
   );
 };

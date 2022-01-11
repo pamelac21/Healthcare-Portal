@@ -9,7 +9,26 @@ export const QUERY_PROVIDERS = gql`
       }
     }
 `;
-
+export const QUERY_FACILITIES = gql`
+  {
+    facilities {
+      Id
+      name
+      address
+      }
+    }
+`;
+export const QUERY_PROCEDURES = gql`
+  {
+    procedures {
+      Id
+      Procedure
+      CPTCode
+      Price
+      FacilityId
+      }
+    }
+`;
 export const QUERY_SEARCH = gql`
   query Search($FacilityId: Int) {
     procedures(FacilityId: $FacilityId) {

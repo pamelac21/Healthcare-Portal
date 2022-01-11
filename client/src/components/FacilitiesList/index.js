@@ -7,17 +7,17 @@ const FacilitiesList = ({ facilities }) => {
 
   return (
     <div>
-      {/* {facilities &&
+      {facilities &&
         facilities.map(facility => (
-          <div key={facility._id} className="card mb-3">
+          <div key={facility.Id} className="card mb-3">
             <h2 className="card-header">
               {facility.name}
             </h2>
             <div className="card-body">
-              <p>{facility.address</p>
+              <p>{facility.address}</p>
             </div>
           </div>
-        ))} */}
+        ))}
     </div>
   );
 };
