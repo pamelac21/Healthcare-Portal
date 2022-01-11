@@ -62,7 +62,6 @@ const resolvers = {
     },
   },
 
-  //check all instances of "user/User" = users?
 };
 
 module.exports = resolvers;
