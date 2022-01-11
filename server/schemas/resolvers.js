@@ -29,11 +29,6 @@ const resolvers = {
       const procedureData = await Procedures.find()
 
       return procedureData
-    },
-    users: async (parent, args, context) => {
-      const userData = await Users.find()
-
-      return userData
     }
   },
 
