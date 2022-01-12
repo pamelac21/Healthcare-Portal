@@ -12,7 +12,7 @@ export const QUERY_PROVIDERS = gql`
 export const QUERY_FACILITIES = gql`
   {
     facilities {
-      Id
+      FacilityId
       name
       address
       }
@@ -26,10 +26,6 @@ export const QUERY_PROCEDURES = gql`
       CPTCode
       Price
       FacilityId
-      facility{
-        name
-        address
-      }
       }
     }
 `;

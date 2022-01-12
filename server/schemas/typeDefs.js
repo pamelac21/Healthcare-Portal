@@ -22,7 +22,7 @@ type Procedure {
     Price: Int
     FacilityId: Int
     bodypart: String
-    facilities: [Facility]
+    facility: [Facility]
     
 }
 
@@ -30,7 +30,7 @@ type Provider {
     Id: Int
     name: String
     FacilityId: Int
-    facilities: [Facility]
+    facility: [Facility]
 }
   type Auth {
     token: ID!
