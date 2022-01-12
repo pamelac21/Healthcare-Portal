@@ -17,7 +17,7 @@ type Procedure {
     Price: Int
     FacilityId: Int
     bodypart: String
-    facilities: [Facility]
+    facilities: Facility
     
 }
 
@@ -41,7 +41,7 @@ type Provider {
   type Query {
 
     me: User
-    users: [User]
+    user: [User]
     providers(FacilityId: Int): [Provider]
 
     facilities: [Facility]

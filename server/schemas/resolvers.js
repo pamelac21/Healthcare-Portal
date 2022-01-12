@@ -4,21 +4,21 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    // user: async (parent, args, context) => {
-    //   if (context.user) {
-    //     const userData = await Users.findOne({ _id: context.user._id }).select(
-    //       "-__v -password"
-    //     );
-    //     //.populate('thing you want populated')
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const userData = await Users.findOne({ _id: context.user._id }).select(
+          "-__v -password"
+        );
+        //.populate('thing you want populated')
 
-    //     return userData;
-    //   }
-    //   throw new AuthenticationError("Not logged in");
-    // },
+        return userData;
+      }
+      throw new AuthenticationError("Not logged in");
+    },
     providers: async (parent, args, context, {FacilityId}) => {
       const params = FacilityId ? {FacilityId} : {};
       const providerData = await Providers.find(params)
-
+      
       return providerData
     },
     facilities: async (parent, args, context) => {
@@ -27,16 +27,21 @@ const resolvers = {
       return facilityData
     },
     procedures: async (parent, { FacilityId }) => {
-      const params = FacilityId ? { FacilityId } : {};
- 
-
-
-      return Procedures.find(params)
-    },
-    users: async (parent, args, context) => {
-      const userData = await Users.find()
-
-      return userData
+    //   const params = FacilityId ? { FacilityId } : {};
+    //   console.log(FacilityId)
+    //   let emptyArray = [];
+    //  var query = await Facilities.findOne({FacilityId : FacilityId})
+    //  console.log(query)
+    //   const results = await Procedures.find({})
+    //   // results.forEach(async (element) => {
+    //   //   let facility =
+    //   //    await Facilities.findOne({FacilityId : element.FacilityId})
+    //   //    element.facilities = facility 
+    //   //   emptyArray.push(element)
+        
+    //   // })
+      
+    //   console.log(emptyArray)
     },
 
   },
