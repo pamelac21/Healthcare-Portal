@@ -9,7 +9,7 @@ type User {
   }
 
 type Facility {
-    Id : Int
+    Id: Int
     name: String
     address: String
     
@@ -38,7 +38,7 @@ type Provider {
   }
 
   type Query {
-    me: User
+    user: User
     providers: [Provider]
     facilities: [Facility]
     procedures: [Procedure]
