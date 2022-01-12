@@ -2,20 +2,15 @@ import React from 'react'
 import './searchForm.css'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
-import { useQuery, gql } from "@apollo/client";
-import { QUERY_PROCEDURES} from '../../utils/queries'
+import { useQuery } from "@apollo/client";
+import { QUERY_PROCEDURES } from '../../utils/queries'
 
 
-
-<<<<<<< HEAD
-const SearchForm = () => {
-=======
 const SearchForm = ({}) => {
-    const [searchTerm, setSearchTerm] = useState('')
-    const { loading, data } = useQuery(QUERY_PROCEDURES);
-    const procedures = data?.procedures || [];
+  const [searchTerm, setSearchTerm] = useState('')
+  const { loading, data } = useQuery(QUERY_PROCEDURES);
+  const procedures = data?.procedures || [];
 
->>>>>>> d07e80e9779c527f2394752a7c63097be92e3a5e
     return (
         <div className='card-searchform'>
             
