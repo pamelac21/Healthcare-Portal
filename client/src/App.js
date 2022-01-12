@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Facilities from './pages/Facilities';
 import Procedures from './pages/Procedures';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
+import Signup from './pages/Signup'
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -30,7 +30,6 @@ function App() {
             <Route exact path="/Providers" element={<Providers/>}></Route>
             <Route exact path="/Login" element={<Login/>}></Route>
             <Route exact path="/Signup" element={<Signup/>}></Route>
-
             </Routes>
           </div>
         </div>

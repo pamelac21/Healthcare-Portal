@@ -15,23 +15,18 @@ This application allows users to easily access information linking them to thier
 
 [Github Repo](https://github.com/crhodes111/Healthcare-Project-3/)
 
-[Deployed App]()
+[Deployed App](https://quiet-dawn-07208.herokuapp.com/)
 
-{SS}
+![ss-project3](https://user-images.githubusercontent.com/87335354/149222749-6d50be6c-83ef-463d-bc07-4d60b2adcddf.png)
 
 
 ## Technologies Required
 
 * Performant JavaScript
-* 
 * NoSQL databases
-* 
 * React single-page applications
-* 
 * GraphQL APIs
-* 
 * Concurrent servers in a MERN app
-* 
 * Authentication
 
 

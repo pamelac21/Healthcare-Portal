@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import SearchForm from '../components/SearchForm';
-import Header from '../components/Header'
+import SearchForm from '../components/SearchForm/index';
 import './pages.css'
 //import {Query_PROCEDURES} from '../utils/queries'
 
