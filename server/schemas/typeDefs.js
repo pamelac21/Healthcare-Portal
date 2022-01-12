@@ -9,34 +9,37 @@ type User {
     password: String
   }
 
-type Facility {
-    FacilityId : Int
-    name: String
-    address: String
-}
+
 
 type Procedure {
+    _id: ID
     Id: Int
     Procedure: String
     CPTCode: String
     Price: Int
     FacilityId: Int
     bodypart: String
-    facility: [Facility]
+    facilities: [Facility]
     
 }
 
 type Provider {
+    _id: ID
     Id: Int
     name: String
     FacilityId: Int
-    facility: [Facility]
+    facilities: [Facility]
 }
   type Auth {
     token: ID!
     user: User
   }
-
+  type Facility {
+    _id: ID
+    FacilityId : Int
+    name: String
+    address: String
+}
   type Query {
     me: User
     users: [User]

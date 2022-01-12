@@ -3,6 +3,11 @@ const { Users, Facilities, Procedures, Providers } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
+  Procedure:{
+    facilities (Procedure){
+      return Facility.filter(facility => facility.FacilityId === Procedure.FacilityId)
+    }
+  },
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
