@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
 const facilitiesSchema = new Schema({
     FacilityId:{
@@ -15,11 +15,17 @@ const facilitiesSchema = new Schema({
     address:{
         type: String,
     }
+},
+    {
+        toJSON: {
+          getters: true
+        }
+      }
 
 
-})
+)
 
-const Facilities = mongoose.model("Facilities", facilitiesSchema)
+const Facilities = model("Facilities", facilitiesSchema)
 
 module.exports = Facilities;
 

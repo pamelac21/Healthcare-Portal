@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
 const ProvidersSchema = new Schema({
     Id:{
@@ -19,6 +19,6 @@ const ProvidersSchema = new Schema({
 
 })
 
-const Providers = mongoose.model("Providers", ProvidersSchema)
+const Providers = model("Providers", ProvidersSchema)
 
 module.exports = Providers;
