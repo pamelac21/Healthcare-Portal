@@ -26,22 +26,21 @@ export const QUERY_PROCEDURES = gql`
       CPTCode
       Price
       FacilityId
+      facility{
+        name
+        address
+      }
       }
     }
 `;
-export const QUERY_SEARCH = gql`
-  query Search($FacilityId: Int) {
-    procedures(FacilityId: $FacilityId) {
+export const QUERY_SEARCHPROCEDURES = gql`
+  query Procedures($Procedure: String) {
+    procedures(Procedure: $Procedure) {
       Id
       Procedure
       CPTCode
       Price
       FacilityId
-      facilities{ 
-        Id
-        name
-        address
-      }
     }
   }
 `;

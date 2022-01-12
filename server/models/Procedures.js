@@ -20,6 +20,9 @@ const proceduresSchema = new Schema({
     },
     FacilityId:{
         type: Number,
+    },
+    bodypart:{
+        type: String
     }
 
 
