@@ -23,15 +23,10 @@ This application allows users to easily access information linking them to thier
 ## Technologies Required
 
 * Performant JavaScript
-* 
 * NoSQL databases
-* 
 * React single-page applications
-* 
 * GraphQL APIs
-* 
 * Concurrent servers in a MERN app
-* 
 * Authentication
 
 
