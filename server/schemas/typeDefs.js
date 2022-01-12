@@ -6,9 +6,7 @@ type User {
     _id: ID
     username: String
     email: String
-    password: String
   }
-
 
 
 type Procedure {
@@ -31,7 +29,7 @@ type Provider {
     facilities: [Facility]
 }
   type Auth {
-    token: ID!
+    token: ID
     user: User
   }
   type Facility {
@@ -41,16 +39,18 @@ type Provider {
     address: String
 }
   type Query {
+
     me: User
     users: [User]
     providers(FacilityId: Int): [Provider]
+
     facilities: [Facility]
     procedures(FacilityId: Int): [Procedure]
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
   }
 
 `

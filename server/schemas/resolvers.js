@@ -9,7 +9,7 @@ const resolvers = {
     }
   },
   Query: {
-    me: async (parent, args, context) => {
+    user: async (parent, args, context) => {
       if (context.user) {
         const userData = await Users.findOne({ _id: context.user._id }).select(
           "-__v -password"
@@ -34,6 +34,7 @@ const resolvers = {
     procedures: async (parent, { FacilityId }) => {
       const params = FacilityId ? { FacilityId } : {};
  
+
 
       return Procedures.find(params)
     },
@@ -70,7 +71,6 @@ const resolvers = {
     },
   },
 
-  //check all instances of "user/User" = users?
 };
 
 module.exports = resolvers;
