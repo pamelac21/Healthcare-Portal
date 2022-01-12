@@ -3,7 +3,7 @@ import './searchForm.css'
 import {Link} from 'react-router-dom'
 
 
-const SearchForm = ({}) => {
+const SearchForm = () => {
     return (
         <div className='card-searchform'>
             

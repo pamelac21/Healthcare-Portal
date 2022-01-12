@@ -4,10 +4,10 @@ const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 
 const usersSchema = new Schema({
-username:{
+/*username:{
   type: String,
   required: true
-},
+},*/
 email:{
     type: String,
     required: true,
