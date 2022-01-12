@@ -15,8 +15,9 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in");
     },
-    providers: async (parent, args, context) => {
-      const providerData = await Providers.find()
+    providers: async (parent, args, context, {FacilityId}) => {
+      const params = FacilityId ? {FacilityId} : {};
+      const providerData = await Providers.find(params)
 
       return providerData
     },
@@ -25,11 +26,19 @@ const resolvers = {
 
       return facilityData
     },
-    procedures: async (parent, args, context) => {
-      const procedureData = await Procedures.find()
+    procedures: async (parent, { FacilityId }) => {
+      const params = FacilityId ? { FacilityId } : {};
+ 
 
-      return procedureData
-    }
+
+      return Procedures.find(params)
+    },
+    users: async (parent, args, context) => {
+      const userData = await Users.find()
+
+      return userData
+    },
+
   },
 
   Mutation: {
