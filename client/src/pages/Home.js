@@ -8,7 +8,7 @@ import './pages.css'
 function Home() {
 
     return (
-        <div className='home'>
+        <div>
             <SearchForm/> 
         </div>
     )

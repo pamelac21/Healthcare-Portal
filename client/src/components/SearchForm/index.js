@@ -31,7 +31,7 @@ const SearchForm = ({}) => {
           </form>
            {procedures &&
            procedures.filter((val)=>{
-               if (searchTerm == ""){
+               if (searchTerm === ""){
                    return val
                }
                else if (val.Procedure.toLowerCase().includes(searchTerm.toLowerCase())){
