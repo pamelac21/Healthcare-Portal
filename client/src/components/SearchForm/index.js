@@ -7,11 +7,15 @@ import { QUERY_PROCEDURES} from '../../utils/queries'
 
 
 
+<<<<<<< HEAD
+const SearchForm = () => {
+=======
 const SearchForm = ({}) => {
     const [searchTerm, setSearchTerm] = useState('')
     const { loading, data } = useQuery(QUERY_PROCEDURES);
     const procedures = data?.procedures || [];
 
+>>>>>>> d07e80e9779c527f2394752a7c63097be92e3a5e
     return (
         <div className='card-searchform'>
             
