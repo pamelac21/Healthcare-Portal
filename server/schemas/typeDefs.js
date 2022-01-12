@@ -8,11 +8,11 @@ type User {
   }
 
 type Facility {
-    Id: Int
+
+    FacilityId : Int
+
     name: String
     address: String
-    
-
 }
 
 type Procedure {
@@ -21,7 +21,9 @@ type Procedure {
     CPTCode: String
     Price: Int
     FacilityId: Int
+    bodypart: String
     facility: [Facility]
+    
 }
 
 type Provider {
@@ -30,17 +32,19 @@ type Provider {
     FacilityId: Int
     facility: [Facility]
 }
-
   type Auth {
     token: ID
     user: User
   }
 
   type Query {
-    user: User
-    providers: [Provider]
+
+    me: User
+    users: [User]
+    providers(FacilityId: Int): [Provider]
+
     facilities: [Facility]
-    procedures: [Procedure]
+    procedures(FacilityId: Int): [Procedure]
   }
 
   type Mutation {
