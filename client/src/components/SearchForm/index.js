@@ -5,11 +5,11 @@ import { useState } from 'react'
 import { useQuery } from "@apollo/client";
 import { QUERY_PROCEDURES } from '../../utils/queries'
 
-
 const SearchForm = ({}) => {
   const [searchTerm, setSearchTerm] = useState('')
   const { loading, data } = useQuery(QUERY_PROCEDURES);
   const procedures = data?.procedures || [];
+
 
     return (
         <div className='card-searchform'>

@@ -15,7 +15,7 @@ const proceduresSchema = new Schema({
         type: String,
     },
     Price:{
-        type: Number,
+        type: String,
 
     },
     FacilityId:{
