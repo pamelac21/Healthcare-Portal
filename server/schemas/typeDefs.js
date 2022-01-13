@@ -13,10 +13,10 @@ type Procedure {
     Id: Int
     Procedure: String
     CPTCode: String
-    Price: Int
+    Price: String
     FacilityId: Int
     bodypart: String
-    facilities: Facility
+    facilities: [Facility]
     
 }
 
@@ -41,10 +41,10 @@ type Provider {
 
     me: User
     user: [User]
-    providers(FacilityId: Int): [Provider]
+    providers: [Provider]
 
     facilities: [Facility]
-    procedures(FacilityId: Int): [Procedure]
+    procedures: [Procedure]
   }
 
   type Mutation {

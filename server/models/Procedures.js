@@ -23,13 +23,8 @@ const proceduresSchema = new Schema({
     },
     bodypart:{
         type: String
-    },
-    facility: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: 'Facilities'
-        }
-      ],
+    }
+
 },
 {
     toJSON: {

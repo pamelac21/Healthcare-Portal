@@ -30,15 +30,4 @@ export const QUERY_PROCEDURES = gql`
     }
 `;
 
-export const QUERY_SEARCHPROCEDURES = gql`
-  query Procedures($Procedure: String) {
-    procedures(Procedure: $Procedure) {
-      Id
-      Procedure
-      CPTCode
-      Price
-      FacilityId
-    }
-  }
-`;
 
