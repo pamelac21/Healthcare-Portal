@@ -27,7 +27,7 @@ This application allows users to easily access information linking them to thier
 
 [Deployed App](https://quiet-dawn-07208.herokuapp.com/)
 
-![ss-project3](https://user-images.githubusercontent.com/87335354/149222749-6d50be6c-83ef-463d-bc07-4d60b2adcddf.png)
+<img src="https://user-images.githubusercontent.com/87335354/149222749-6d50be6c-83ef-463d-bc07-4d60b2adcddf.png" width="600">
 
 
 ## Technologies Required
