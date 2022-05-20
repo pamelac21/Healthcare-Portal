@@ -1,4 +1,4 @@
-# Healthcare-Project-3
+# Healthcare Portal
 
 
 ## Description
