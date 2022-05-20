@@ -5,6 +5,16 @@
 
 This is a `MERN` stack single-page application that works with real-world data to solve a real-world challenge, with a focus on data and user demand.
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployed Site](#deployed-application)
+- [Tech Used](#tech-used)
+- [Contact](#contributing)
+- [Contributing](#contributing)
+- [License](#license)
+
 
 ## Concept
 
@@ -58,6 +68,12 @@ This application allows users to easily access information linking them to thier
 [Pamela](https://github.com/pamelac21)
 
 [Zach](https://github.com/Nativeblanks)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
 
